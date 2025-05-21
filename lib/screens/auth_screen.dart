@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:dreamflow/models/user_model.dart';
 import 'package:dreamflow/widgets/common_widgets.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:dreamflow/screens/home_screen.dart';
 import 'package:dreamflow/services/auth_service.dart';
 import 'package:dreamflow/services/firebase_service.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:dreamflow/screens/welcome_screen.dart';
 import 'package:dreamflow/widgets/responsive_layout.dart';
 
 enum AuthMode { login, register }

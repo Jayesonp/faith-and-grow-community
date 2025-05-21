@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dreamflow/models/user_model.dart';
 import 'package:dreamflow/models/community_model.dart';
 import 'package:dreamflow/services/firebase_service.dart';
-import 'package:dreamflow/services/firestore_service.dart';
 import 'package:intl/intl.dart';
 
 /// Service for handling admin-specific operations

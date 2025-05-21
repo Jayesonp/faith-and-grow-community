@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dreamflow/theme.dart';
-import 'package:dreamflow/services/firebase_service.dart';
-import 'package:dreamflow/services/admin_service.dart';
 import 'package:dreamflow/screens/admin/user_management_screen.dart';
 import 'package:dreamflow/screens/admin/community_management_screen.dart';
 import 'package:dreamflow/screens/admin/grant_admin_access.dart';
 import 'package:dreamflow/widgets/common_widgets.dart';
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdminDashboardScreen extends StatefulWidget {

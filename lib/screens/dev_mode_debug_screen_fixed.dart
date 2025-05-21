@@ -426,7 +426,7 @@ class _DevModeDebugScreenState extends State<DevModeDebugScreen> {
                         padding: EdgeInsets.only(bottom: 8.h),
                         child: RichText(
                           text: TextSpan(
-                            style: TextStyle(color: Theme.of(context).colorScheme.onBackground),
+                            style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                             children: [
                               TextSpan(
                                 text: '${entry.key}: ',
@@ -511,7 +511,7 @@ class _DevModeDebugScreenState extends State<DevModeDebugScreen> {
                       padding: EdgeInsets.only(bottom: 8.h),
                       child: RichText(
                         text: TextSpan(
-                          style: TextStyle(color: Theme.of(context).colorScheme.onBackground),
+                          style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                           children: [
                             TextSpan(
                               text: '${entry.key}: ',

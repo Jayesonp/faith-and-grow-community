@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:dreamflow/theme.dart';
 import 'dart:async';
 
 /// Types of notifications that can be displayed

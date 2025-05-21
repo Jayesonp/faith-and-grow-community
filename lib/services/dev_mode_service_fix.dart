@@ -1,6 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dreamflow/services/firebase_service.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 /// Service for managing developer mode settings with improved reliability
 /// This allows bypassing certain restrictions during development and testing

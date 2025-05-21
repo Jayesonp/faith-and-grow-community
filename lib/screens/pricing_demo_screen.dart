@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:dreamflow/widgets/pricing_table.dart';
 import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

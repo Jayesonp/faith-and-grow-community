@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dreamflow/theme.dart';
 
 /// A standardized card widget optimized for mobile displays
 /// Provides consistent styling and layout for card elements

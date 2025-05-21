@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dreamflow/widgets/pricing_section.dart';
-import 'package:dreamflow/widgets/common_widgets.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:dreamflow/widgets/responsive_layout.dart';
 
 class PricingExampleScreen extends StatefulWidget {

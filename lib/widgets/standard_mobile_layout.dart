@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dreamflow/theme.dart';
 
 /// A helper widget for standardizing mobile layouts across the app
 /// This provides consistent padding, spacing, and organizational structure

@@ -112,7 +112,7 @@ class FirestoreService {
           .get();
           
       return snapshot.docs
-          .map((doc) => Community.fromJson(doc.data() as Map<String, dynamic>))
+          .map((doc) => Community.fromJson(doc.data()))
           .toList();
     } catch (e) {
       print('Error getting communities by creator: $e');

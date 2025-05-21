@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:dreamflow/services/dev_mode_service.dart';
 import 'package:dreamflow/services/dev_mode_service_fix.dart';
 import 'package:dreamflow/services/firebase_service.dart';
-import 'package:dreamflow/theme.dart';
-import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dreamflow/widgets/error_notification.dart';
 import 'package:shared_preferences/shared_preferences.dart';

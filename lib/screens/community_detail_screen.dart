@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:dreamflow/models/community_model.dart';
 import 'package:dreamflow/services/community_service.dart';
-import 'package:dreamflow/widgets/community_widgets.dart';
 import 'package:dreamflow/screens/community_dashboard_screen.dart';
 import 'package:dreamflow/widgets/common_widgets.dart';
-import 'package:dreamflow/theme.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class CommunityDetailScreen extends StatefulWidget {
   final Community community;

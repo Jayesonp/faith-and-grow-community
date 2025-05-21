@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dreamflow/models/user_model.dart';
-import 'package:dreamflow/models/content_model.dart';
 import 'package:dreamflow/services/data_service.dart';
 import 'package:dreamflow/widgets/common_widgets.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:dreamflow/widgets/responsive_layout.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
@@ -13,8 +11,6 @@ import 'package:dreamflow/screens/learning_screen.dart';
 import 'package:dreamflow/screens/directory_screen.dart';
 import 'package:dreamflow/screens/profile_screen.dart';
 import 'package:dreamflow/screens/dashboard_tab.dart';
-import 'package:dreamflow/screens/community_discovery_screen.dart';
-import 'package:dreamflow/screens/community_creation_screen.dart';
 import 'package:dreamflow/screens/donation_screen.dart';
 import 'package:dreamflow/screens/pricing_screen.dart';
 import 'package:dreamflow/screens/settings_screen.dart';

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:dreamflow/screens/auth_screen.dart';
-import 'package:dreamflow/screens/pricing_screen.dart';
 import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

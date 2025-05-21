@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PricingCard extends StatelessWidget {

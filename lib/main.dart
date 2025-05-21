@@ -149,11 +149,9 @@ class MyApp extends StatelessWidget {
               
               return MediaQuery(
                 data: MediaQuery.of(context).copyWith(
-                  textScaleFactor: textScaleFactor,
-                  // Adjusted padding for web
                   padding: screenWidth < 600 
                       ? MediaQuery.of(context).padding 
-                      : const EdgeInsets.all(0), // Remove browser padding on larger screens
+                      : const EdgeInsets.all(0), textScaler: TextScaler.linear(textScaleFactor), // Remove browser padding on larger screens
                 ),
                 child: widget,
               );
@@ -166,10 +164,8 @@ class MyApp extends StatelessWidget {
               
               return MediaQuery(
                 data: MediaQuery.of(context).copyWith(
-                  textScaleFactor: cappedTextScale,
-                  // Keep standard system padding and insets for mobile apps
                   padding: MediaQuery.of(context).padding,
-                  viewInsets: MediaQuery.of(context).viewInsets,
+                  viewInsets: MediaQuery.of(context).viewInsets, textScaler: TextScaler.linear(cappedTextScale),
                 ),
                 child: widget,
               );

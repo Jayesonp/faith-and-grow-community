@@ -1,7 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dreamflow/models/community_model.dart';
 import 'dart:convert';
-import 'package:uuid/uuid.dart';
 
 class DataInitializer {
   static const String _initializedKey = 'communities_initialized';

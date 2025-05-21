@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:animations/animations.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:dreamflow/screens/community_creation_screen.dart';
 import 'package:dreamflow/services/firebase_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 class CommunityPaymentScreen extends StatefulWidget {
   final String userId;

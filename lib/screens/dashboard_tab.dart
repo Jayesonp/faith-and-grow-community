@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:dreamflow/models/user_model.dart';
 import 'package:dreamflow/services/community_service.dart';
-import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:dreamflow/screens/community_discovery_screen.dart';
 import 'package:dreamflow/screens/community_creation_screen.dart';
 import 'package:dreamflow/screens/community_detail_screen.dart';
 import 'package:dreamflow/screens/community_dashboard_screen.dart';
 import 'package:dreamflow/models/community_model.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:dreamflow/screens/community_payment_screen.dart';
 import 'package:dreamflow/screens/pricing_screen.dart';
 import 'package:dreamflow/screens/pricing_example_screen.dart';
@@ -17,7 +15,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 import 'package:animations/animations.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 
 class DashboardTab extends StatefulWidget {
   const DashboardTab({Key? key}) : super(key: key);

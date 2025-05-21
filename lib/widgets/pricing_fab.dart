@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
 import 'package:dreamflow/screens/pricing_screen.dart';
-import 'package:dreamflow/theme.dart';
 
 class PricingFAB extends StatefulWidget {
   const PricingFAB({Key? key}) : super(key: key);

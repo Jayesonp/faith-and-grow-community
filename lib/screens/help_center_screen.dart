@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HelpCenterScreen extends StatefulWidget {

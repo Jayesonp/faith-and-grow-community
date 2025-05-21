@@ -143,7 +143,7 @@ class CommunityService {
 
       return querySnapshot.docs
           .map((doc) {
-              final data = doc.data() as Map<String, dynamic>;
+              final data = doc.data();
               return Community.fromJson({...data, 'id': doc.id});
             })
             .toList();
@@ -516,7 +516,7 @@ class CommunityService {
 
       return querySnapshot.docs
           .map((doc) {
-            final data = doc.data() as Map<String, dynamic>;
+            final data = doc.data();
             return CommunityMembership.fromJson({...data, 'id': doc.id});
           })
           .toList();
@@ -547,7 +547,7 @@ class CommunityService {
 
       return querySnapshot.docs
           .map((doc) {
-            final data = doc.data() as Map<String, dynamic>;
+            final data = doc.data();
             return CommunityMembership.fromJson({...data, 'id': doc.id});
           })
           .toList();
@@ -568,7 +568,7 @@ class CommunityService {
 
       return querySnapshot.docs
           .map((doc) {
-            final data = doc.data() as Map<String, dynamic>;
+            final data = doc.data();
             return CommunityMembership.fromJson({...data, 'id': doc.id});
           })
           .toList();
@@ -594,7 +594,7 @@ class CommunityService {
       }
 
       final doc = querySnapshot.docs.first;
-      final data = doc.data() as Map<String, dynamic>;
+      final data = doc.data();
       return CommunityMembership.fromJson({...data, 'id': doc.id});
     } catch (e) {
       print('Error checking membership: $e');
@@ -730,7 +730,7 @@ class CommunityService {
       }
 
       final doc = querySnapshot.docs.first;
-      final currentMembership = CommunityMembership.fromJson({...doc.data() as Map<String, dynamic>, 'id': doc.id});
+      final currentMembership = CommunityMembership.fromJson({...doc.data(), 'id': doc.id});
 
       // If already on this tier, just return the current membership
       if (currentMembership.tierId == newTierId) {

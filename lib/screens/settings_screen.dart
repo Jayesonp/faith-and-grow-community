@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:dreamflow/models/user_model.dart';
 import 'package:dreamflow/services/auth_service.dart';
-import 'package:dreamflow/services/firebase_service.dart';
 import 'package:dreamflow/services/theme_service.dart';
-import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:dreamflow/screens/pricing_screen.dart';
 import 'package:dreamflow/screens/profile_screen.dart';
 import 'package:dreamflow/screens/help_center_screen.dart';
-import 'package:dreamflow/screens/dev_mode_screen.dart';
 import 'package:dreamflow/screens/dev_mode_debug_screen_fixed.dart' as fixed;
-import 'package:dreamflow/screens/dev_mode_debug_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatefulWidget {

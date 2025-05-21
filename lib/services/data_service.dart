@@ -1,4 +1,3 @@
-import 'package:dreamflow/models/user_model.dart';
 import 'package:dreamflow/models/content_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';

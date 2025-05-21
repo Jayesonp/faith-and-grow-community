@@ -64,12 +64,6 @@ class AuthService {
         print('WARNING: Firebase is in mock mode, authentication might not work');
       }
       
-      // Check auth instance
-      if (_auth == null) {
-        print('ERROR: Firebase Auth instance is null');
-        throw Exception('Authentication service is not available.');
-      }
-      
       final userCredential = await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,

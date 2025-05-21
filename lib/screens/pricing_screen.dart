@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:dreamflow/theme.dart';
-import 'package:dreamflow/widgets/common_widgets.dart';
 import 'package:dreamflow/screens/community_payment_screen_updated.dart' as updated;
-import 'package:dreamflow/screens/community_payment_screen.dart';
 import 'package:dreamflow/services/firebase_service.dart';
-import 'package:animations/animations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:dreamflow/widgets/responsive_layout.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 
 class PricingScreen extends StatefulWidget {
   const PricingScreen({Key? key}) : super(key: key);

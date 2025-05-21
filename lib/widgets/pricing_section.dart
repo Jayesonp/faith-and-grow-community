@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dreamflow/widgets/pricing_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dreamflow/theme.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class PricingSection extends StatelessWidget {

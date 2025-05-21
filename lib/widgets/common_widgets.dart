@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dreamflow/models/content_model.dart';
 import 'package:dreamflow/theme.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:dreamflow/widgets/responsive_layout.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 
 // Standard app bar with Faith and Grow styling
 class FaithAppBar extends StatelessWidget implements PreferredSizeWidget {
