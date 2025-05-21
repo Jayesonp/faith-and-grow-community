@@ -1,0 +1,100 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Check if user is an admin
+    function isAdmin() {
+      return request.auth != null && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+    
+    // Check if user is in dev mode
+    function isDevMode() {
+      return request.auth != null && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.subscriptionTier == 'dev_mode';
+    }
+    
+    // Check if user can create communities
+    function canCreateCommunity() {
+      return request.auth != null && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.canCreateCommunity == true || 
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.subscriptionTier == 'dev_mode');
+    }
+    
+    // Allow users to read and write their own profiles
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      // Allow creation for new sign-ups WITHOUT requiring authentication
+      allow create: if true; // This allows new users to create their document during sign-up
+      allow update: if request.auth != null && (request.auth.uid == userId || isAdmin());
+      allow delete: if request.auth != null && isAdmin(); // Only admins can delete users
+    }
+    
+    // Community rules
+    match /communities/{communityId} {
+      allow read: if request.auth != null; // All authenticated users can read communities
+      // Simplified create rule for troubleshooting
+      allow create: if request.auth != null;
+      allow update: if request.auth != null && (
+        // Creator can update their community
+        request.auth.uid == resource.data.creatorId ||
+        // Admin can update any community
+        isAdmin()
+      );
+      allow delete: if request.auth != null && (request.auth.uid == resource.data.creatorId || isAdmin());
+    }
+    
+    // Membership rules
+    match /memberships/{membershipId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow update, delete: if request.auth != null && (request.auth.uid == resource.data.userId);
+    }
+    
+    // Post rules
+    match /posts/{postId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Comment rules
+    match /comments/{commentId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Donation rules
+    match /donations/{donationId} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+    }
+    
+    // Subscription rules
+    match /subscriptions/{subscriptionId} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Admin actions - audit trail for admin operations
+    match /admin_actions/{actionId} {
+      allow read: if request.auth != null && isAdmin();
+      allow create: if request.auth != null && isAdmin();
+      allow update, delete: if false; // Admin actions should be immutable
+    }
+    
+    // Default deny
+    match /{document=**} {
+      // Admin override - admins can access all data
+      allow read: if request.auth != null && isAdmin();
+      allow write: if request.auth != null && isAdmin();
+      
+      // For non-admins, deny by default
+      allow read, write: if false;
+    }
+  }
+}

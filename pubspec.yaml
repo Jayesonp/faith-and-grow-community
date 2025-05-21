@@ -1,0 +1,46 @@
+name: dreamflow
+description: "A DreamFlow project"
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  fluttertoast: ^8.2.4
+  google_sign_in: '>=6.2.1'
+  sign_in_with_apple: '>=6.1.2'
+  firebase_auth: '>=5.3.3'
+  cloud_firestore: '>=5.5.0'
+  firebase_core: '>=2.21.1'
+  data_table_2: ^2.0.0
+  flutter_admin_scaffold: ^1.0.0
+  flutter_screenutil: ^5.9.0
+  responsive_builder: ^0.7.1
+  flutter_credit_card: ^4.0.1
+  image_picker: '>=1.1.2'
+  flutter_svg: ^2.0.0
+  url_launcher: ^6.0.0
+  confetti: ^0.7.0
+  intl: ^0.19.0
+  cached_network_image: ^3.0.0
+  firebase_storage: ^12.4.5
+  animations: ^2.0.8
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  fl_chart: 0.68.0
+  google_fonts: 6.1.0
+  shared_preferences: ^2.3.2
+  path_provider: 2.1.4
+  provider: ^6.1.2
+  http: '>=1.0.0'
+  uuid: '>=3.0.0'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  change_app_package_name: ^1.4.0
+
+flutter:
+  uses-material-design: true

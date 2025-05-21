@@ -1,0 +1,100 @@
+{
+  "collections": {
+    "users": [
+      {
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "businessName": "Smith's Design",
+        "businessDescription": "Christian graphic design and branding services",
+        "profileImageUrl": "https://randomuser.me/api/portraits/men/1.jpg",
+        "interests": ["design", "branding", "marketing"],
+        "subscriptionTier": "growth",
+        "canCreateCommunity": true,
+        "communityLimit": 5
+      },
+      {
+        "name": "Sarah Johnson",
+        "email": "sarah.johnson@example.com",
+        "businessName": "Faith Marketing",
+        "businessDescription": "Marketing services for Christian businesses",
+        "profileImageUrl": "https://randomuser.me/api/portraits/women/2.jpg",
+        "interests": ["marketing", "social media", "advertising"],
+        "subscriptionTier": "mastermind",
+        "canCreateCommunity": true,
+        "communityLimit": -1
+      },
+      {
+        "name": "Michael Brown",
+        "email": "michael.brown@example.com",
+        "businessName": "Faithful Finance",
+        "businessDescription": "Faith-based financial advisory services",
+        "profileImageUrl": "https://randomuser.me/api/portraits/men/3.jpg",
+        "interests": ["finance", "investment", "budgeting"],
+        "subscriptionTier": "community",
+        "canCreateCommunity": true,
+        "communityLimit": 1
+      }
+    ],
+    "subscriptions": [
+      {
+        "userId": "user1",
+        "plan": "growth",
+        "price": 97,
+        "createdAt": "TIMESTAMP",
+        "status": "active",
+        "cardLast4": "4242"
+      },
+      {
+        "userId": "user2",
+        "plan": "mastermind",
+        "price": 297,
+        "createdAt": "TIMESTAMP",
+        "status": "active",
+        "cardLast4": "1234"
+      },
+      {
+        "userId": "user3",
+        "plan": "community",
+        "price": 47,
+        "createdAt": "TIMESTAMP",
+        "status": "active",
+        "cardLast4": "5678"
+      }
+    ],
+    "communities": [
+      {
+        "name": "Christian Entrepreneurs Network",
+        "shortDescription": "A community for entrepreneurs guided by faith principles",
+        "fullDescription": "Connect with like-minded Christian entrepreneurs to share insights, challenges, and opportunities, all while staying true to your faith values.",
+        "creatorId": "user1",
+        "coverImageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+        "category": "Business",
+        "isPublished": true,
+        "createdAt": "TIMESTAMP",
+        "memberCount": 42
+      },
+      {
+        "name": "Faith-Based Marketing Strategies",
+        "shortDescription": "Learn how to market your business authentically",
+        "fullDescription": "Discover marketing strategies that align with your faith and values. Build an authentic brand that resonates with your audience without compromising your beliefs.",
+        "creatorId": "user2",
+        "coverImageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978",
+        "category": "Marketing",
+        "isPublished": true,
+        "createdAt": "TIMESTAMP",
+        "memberCount": 78
+      },
+      {
+        "name": "Biblical Financial Wisdom",
+        "shortDescription": "Applying biblical principles to business finances",
+        "fullDescription": "Learn how to manage your business finances according to biblical principles. Topics include stewardship, debt management, saving, and ethical investment.",
+        "creatorId": "user3",
+        "coverImageUrl": "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+        "category": "Finance",
+        "isPublished": true,
+        "createdAt": "TIMESTAMP",
+        "memberCount": 35
+      }
+    ]
+  }
+}
