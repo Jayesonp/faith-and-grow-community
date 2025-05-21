@@ -63,7 +63,7 @@ class DevModeServiceFix {
     
     // Update user document in Firestore if user is logged in
     String? userId = FirebaseService.currentUserId;
-    if (userId != null && newValue) {
+    if (newValue) {
       try {
         await FirebaseService.firestore.collection('users').doc(userId).update({
           'subscriptionTier': 'dev_mode',
@@ -112,22 +112,18 @@ class DevModeServiceFix {
       
       // Update Firestore user document if signed in
       String? userId = FirebaseService.currentUserId;
-      if (userId != null) {
-        try {
-          await FirebaseService.firestore.collection('users').doc(userId).update({
-            'subscriptionTier': 'dev_mode',
-            'canCreateCommunity': true,
-            'communityLimit': -1, // -1 means unlimited
-          });
-          result['firestoreUpdated'] = true;
-        } catch (e) {
-          result['error'] = 'Firestore update failed: $e';
-          // Continue even if Firestore update fails
-        }
-      } else {
-        result['error'] = 'User not signed in, Firestore not updated';
+      try {
+        await FirebaseService.firestore.collection('users').doc(userId).update({
+          'subscriptionTier': 'dev_mode',
+          'canCreateCommunity': true,
+          'communityLimit': -1, // -1 means unlimited
+        });
+        result['firestoreUpdated'] = true;
+      } catch (e) {
+        result['error'] = 'Firestore update failed: $e';
+        // Continue even if Firestore update fails
       }
-      
+          
       result['success'] = result['localUpdated'];
     } catch (e) {
       result['error'] = 'Error enabling developer mode: $e';
